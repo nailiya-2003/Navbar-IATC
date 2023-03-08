@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+}
+body {
+    min-height: 100vh;
+    background: url("img/priroda_gory_nebo_ozero_oblaka_81150_1920x1080.jpg") center center/cover no-repeat; 
+
+}
+header {
+    position: fixed;
+    background-color: aliceblue;
+    min-height: 70px;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 7%;
+    z-index: 1000;
+}
+header .logo {
+    font-weight: bolder;
+    font-size: 25px;
+    color: black;
+}
+header .navbar ul {
+    position: relative;
+    list-style-type: none;
+}
+header .navbar ul li {
+    position: relative;
+    float: left;
+}
+header .navbar ul li a {
+    font-size: 20px;
+    padding: 20px 50px;
+    color: black;
+    display: block;
+}
+header .navbar ul li a:hover {
+    background-color: black;
+    color: azure;
+}
+header .navbar ul li ul {
+    position: absolute;
+    min-width: 200px;
+    background-color: aliceblue;
+    left: 0;
+    display: none;
+}
+header .navbar ul li ul li {
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, 1);
+}
+header .navbar ul li ul li ul{
+    left: 200px;
+    top: 0;
+}
+header .navbar ul li:hover > ul {
+    display: initial;
+}
+#menu-bar {
+    display: none;
+}
+header label {
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    display: none;
+}
+
+
+
+
+
+@media (max-width:991px) {
+    header {
+        padding: 20px;
+    }
+    header label {
+        display: initial;
+    }
+    header .navbar {
+        position: absolute;
+        top: 100%; 
+        left: 0;
+        right: 0;
+        background-color: aliceblue;
+        border-top: 1px solid rgba(0, 0, 0, 1);
+        display: none;
+    }
+    header .navbar ul li {
+        width: 100%;
+    }
+    header .navbar ul li ul {
+        position: relative;
+        width: 100%;
+    }
+    header .navbar ul li ul li {
+        background-color: rgb(171, 211, 246);   
+    }
+    header .navbar ul li ul li ul{
+        width: 100%;
+        left: 0;
+    }
+    #menu-bar:checked ~ .navbar {
+        display: initial;
+    }
+}
